@@ -16,54 +16,53 @@ export default function CardView({ formData }) {
   const cardCvc = formData.cvc || '000';
 
   return (
-    <div 
+    <div
       className="relative w-full h-[240px] bg-[url('/images/bg-main-mobile.png')] bg-cover bg-no-repeat lg:h-screen lg:w-[483px] shrink-0"
       aria-label="신용카드 시각화 영역"
     >
       {/* === 뒷면 카드 (Card Back) === */}
-      <div 
+      <div
         className="absolute top-[32px] right-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-back.png')] bg-cover rounded-[8px] shadow-2xl transition-all duration-300
                    lg:top-[469px] lg:left-[258px] lg:right-auto lg:w-[447px] lg:h-[245px] lg:rounded-[12px]"
         role="img"
         aria-label="신용카드 뒷면 이미지"
       >
-        <span 
-          className="absolute top-[70px] right-[35px] text-[9px] tracking-[0.15em] text-neutral-white font-medium
-                     lg:top-[111px] lg:right-[50px] lg:text-[14px]"
+        <span
+          className="absolute top-[70px] right-[35px] text-preset-7 text-white font-medium
+                     lg:top-[111px] lg:right-[50px] lg:text-preset-4"
         >
           {cardCvc}
         </span>
       </div>
 
       {/* === 앞면 카드 (Card Front) === */}
-      <div 
-        className="absolute top-[126px] left-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-front.png')] bg-cover rounded-[8px] p-[16px] flex flex-col justify-between shadow-2xl z-10 transition-all duration-300
-                   lg:top-[187px] lg:left-[164px] lg:w-[447px] lg:h-[245px] lg:rounded-[12px] lg:p-[32px]"
+      <div
+        className="absolute top-[126px] left-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-front.png')] bg-cover rounded-[8px] p-spacing-200 flex flex-col justify-between shadow-2xl z-10 transition-all duration-300
+                   lg:top-[187px] lg:left-[164px] lg:w-[447px] lg:h-[245px] lg:rounded-[12px] lg:p-spacing-400"
         role="img"
         aria-label="신용카드 앞면 이미지"
       >
         {/* --- 카드 로고 --- */}
         <div className="flex items-center gap-[10px]">
-          <img 
-            src="/images/card-logo.svg" 
-            alt="카드 로고 아이콘" 
-            className="h-[30px] w-auto lg:h-[47px]" 
+          <img
+            src="/images/card-logo.svg"
+            alt="카드 로고 아이콘"
+            className="h-[30px] w-auto lg:h-[47px]"
           />
         </div>
 
         {/* --- 카드 디테일 정보 --- */}
-        <div className="flex flex-col gap-[12px] lg:gap-[24px]">
+        <div className="flex flex-col gap-[12px] w-[245px] lg:w-[383px] lg:gap-spacing-300">
           {/* 카드 번호 */}
-          <div 
-            className="text-[18px] tracking-[0.15em] text-neutral-white font-medium break-all
-                       lg:text-[28px]"
+          <div
+            className="text-preset-2 text-white font-medium whitespace-nowrap lg:text-preset-1"
             aria-label={`카드 번호: ${cardNumber}`}
           >
             {cardNumber}
           </div>
 
           {/* 소유자 이름 및 만료일 */}
-          <div className="flex justify-between items-center text-[9px] tracking-[0.15em] text-neutral-white uppercase lg:text-[14px]">
+          <div className="flex justify-between items-center text-preset-7 text-white uppercase">
             <span aria-label={`카드 소유자 이름: ${cardName}`}>
               {cardName}
             </span>

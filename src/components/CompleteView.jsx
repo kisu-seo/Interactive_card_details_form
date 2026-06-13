@@ -9,7 +9,7 @@ import React from 'react';
 export default function CompleteView({ onReset }) {
   return (
     <div 
-      className="w-full max-w-[380px] flex flex-col items-center justify-center text-center px-[24px] py-[40px] lg:px-0 lg:py-0"
+      className="w-full max-w-[380px] flex flex-col items-center justify-center text-center px-spacing-300 py-spacing-500 lg:px-spacing-0 lg:py-spacing-0"
       role="region"
       aria-label="제출 성공 안내"
     >
@@ -21,12 +21,12 @@ export default function CompleteView({ onReset }) {
       />
 
       {/* === 성공 헤더 === */}
-      <h1 className="text-[28px] tracking-[0.15em] font-bold text-neutral-dark-violet uppercase mb-[16px]">
+      <h1 className="text-preset-1 font-bold text-purple-950 uppercase mb-spacing-200">
         Thank You!
       </h1>
 
       {/* === 성공 설명 === */}
-      <p className="text-[16px] text-neutral-gray font-medium mb-[48px]">
+      <p className="text-[16px] text-gray-400 font-medium mb-spacing-600">
         We've added your card details
       </p>
 
@@ -34,7 +34,7 @@ export default function CompleteView({ onReset }) {
       <button
         type="button"
         onClick={onReset}
-        className="w-full h-[53px] bg-neutral-dark-violet text-neutral-white rounded-lg font-medium text-[18px] cursor-pointer transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-active-start"
+        className="w-full h-[53px] bg-purple-950 text-white rounded-lg font-medium text-preset-3 cursor-pointer transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#6348FE]"
       >
         Continue
       </button>

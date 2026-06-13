@@ -4,24 +4,76 @@
 @theme {
   --font-sans: 'Space Grotesk', sans-serif;
   
-  /* --- Brand Colors (브랜드 색상) --- */
-  --color-active-start: hsl(249, 99%, 64%);
-  --color-active-end: hsl(278, 94%, 30%);
-  --color-error: hsl(0, 100%, 66%);
-  
-  /* --- Neutral Colors (무채색 계열) --- */
-  --color-neutral-white: hsl(0, 100%, 100%);
-  --color-neutral-light-gray: hsl(270, 3%, 87%);
-  --color-neutral-gray: hsl(212, 12%, 71%);
-  --color-neutral-dark-violet: hsl(278, 68%, 11%);
+  /* --- Colors (색상) --- */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-950: #2F2F2F;
+  --color-gray-400: #ADB5BE;
+  --color-gray-200: #DFDEE0;
+  --color-purple-950: #21092F;
+  --color-purple-500: #D53AFF;
+  --color-orange-400: #F4834A;
+  --color-blue-400: #47A2FF;
+  --color-red-400: #FF5050;
+
+  /* --- Gradients (그라디언트) --- */
+  --background-image-gradient-1: linear-gradient(to right, #FFFFFF, #D2D3D9);
+  --background-image-gradient-2: linear-gradient(to right, #6348FE, #610995);
+
+  /* --- Spacing (여백) --- */
+  --spacing-spacing-0: 0px;
+  --spacing-spacing-100: 8px;
+  --spacing-spacing-200: 16px;
+  --spacing-spacing-300: 24px;
+  --spacing-spacing-400: 32px;
+  --spacing-spacing-500: 40px;
+  --spacing-spacing-600: 48px;
+  --spacing-spacing-800: 64px;
+}
+
+/* --- Typography Presets (타이포그라피 프리셋) --- */
+@utility text-preset-1 {
+  font-size: 28px;
+  line-height: 1.30;
+  letter-spacing: 3.5px;
+}
+@utility text-preset-2 {
+  font-size: 18px;
+  line-height: 1.30;
+  letter-spacing: 2.5px;
+}
+@utility text-preset-3 {
+  font-size: 18px;
+  line-height: 1.30;
+  letter-spacing: 0px;
+}
+@utility text-preset-4 {
+  font-size: 14px;
+  line-height: 1.30;
+  letter-spacing: 2px;
+}
+@utility text-preset-5 {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 2px;
+}
+@utility text-preset-6 {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+@utility text-preset-7 {
+  font-size: 9px;
+  line-height: 1.25;
+  letter-spacing: 1.25px;
 }
 
 /* === Base Document Reset === */
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
-  background-color: var(--color-neutral-white);
-  color: var(--color-neutral-dark-violet);
+  background-color: var(--color-white);
+  color: var(--color-purple-950);
   min-height: 100vh;
 }
 

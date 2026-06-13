@@ -55,12 +55,12 @@ export default function App() {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row min-h-screen w-full bg-neutral-white relative">
+    <main className="flex flex-col lg:flex-row min-h-screen w-full bg-white relative">
       {/* === 좌측/상단 카드 시각화 영역 === */}
       <CardView formData={formData} />
 
       {/* === 우측/하단 카드 정보 입력 폼 및 결과 영역 === */}
-      <section className="flex-1 flex items-center justify-center py-[40px] lg:py-0 lg:px-[40px]">
+      <section className="flex-1 flex items-center justify-center pt-[91px] pb-[44px] lg:py-spacing-0 lg:px-spacing-500">
         {!isSubmitted ? (
           <CardForm
             formData={formData}
@@ -73,31 +73,6 @@ export default function App() {
           <CompleteView onReset={handleReset} />
         )}
       </section>
-
-      {/* === 푸터 저작권 정보 (Attribution) === */}
-      <footer className="absolute bottom-[10px] left-0 right-0 text-center text-[10px] text-neutral-gray pointer-events-none lg:text-right lg:right-[20px] lg:bottom-[20px]">
-        <p className="pointer-events-auto">
-          Challenge by{' '}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-active-start hover:underline font-bold"
-          >
-            Frontend Mentor
-          </a>
-          . Coded by{' '}
-          <a
-            href="https://github.com/kisu-seo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-active-start hover:underline font-bold"
-          >
-            kisu-seo
-          </a>
-          .
-        </p>
-      </footer>
     </main>
   );
 }
