@@ -1,10 +1,10 @@
-/* === Tailwind Import & Custom Theme === */
+/* === Tailwind Import & Custom Theme (테일윈드 임포트 및 커스텀 테마) === */
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Space Grotesk', sans-serif;
-  
-  /* --- Colors (색상) --- */
+
+  /* --- Colors (색상 정의) --- */
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-gray-950: #2F2F2F;
@@ -16,11 +16,11 @@
   --color-blue-400: #47A2FF;
   --color-red-400: #FF5050;
 
-  /* --- Gradients (그라디언트) --- */
+  /* --- Gradients (그라디언트 정의) --- */
   --background-image-gradient-1: linear-gradient(to right, #FFFFFF, #D2D3D9);
-  --background-image-gradient-2: linear-gradient(to right, #6348FE, #610995);
+  --background-image-gradient-2: linear-gradient(-68deg, #6348FE, #610995);
 
-  /* --- Spacing (여백) --- */
+  /* --- Spacing (여백 정의) --- */
   --spacing-spacing-0: 0px;
   --spacing-spacing-100: 8px;
   --spacing-spacing-200: 16px;
@@ -31,44 +31,64 @@
   --spacing-spacing-800: 64px;
 }
 
-/* --- Typography Presets (타이포그라피 프리셋) --- */
+/* --- Typography Presets (타이포그래피 프리셋) --- */
 @utility text-preset-1 {
   font-size: 28px;
   line-height: 1.30;
   letter-spacing: 3.5px;
 }
+
 @utility text-preset-2 {
   font-size: 18px;
   line-height: 1.30;
   letter-spacing: 2.5px;
 }
+
 @utility text-preset-3 {
   font-size: 18px;
   line-height: 1.30;
   letter-spacing: 0px;
 }
+
 @utility text-preset-4 {
   font-size: 14px;
   line-height: 1.30;
   letter-spacing: 2px;
 }
+
 @utility text-preset-5 {
   font-size: 12px;
   line-height: 1.25;
   letter-spacing: 2px;
 }
+
 @utility text-preset-6 {
   font-size: 12px;
   line-height: 1.25;
   letter-spacing: 0px;
 }
+
 @utility text-preset-7 {
   font-size: 9px;
   line-height: 1.25;
   letter-spacing: 1.25px;
 }
 
-/* === Base Document Reset === */
+/* --- Input Border Utilities (입력창 테두리 유틸리티) --- */
+@utility border-gray-200-normal {
+  border: 1px solid var(--color-gray-200);
+}
+@utility border-red-400-error {
+  border: 1px solid var(--color-red-400);
+}
+@utility border-gradient-2-active {
+  border: 1px solid transparent;
+  background-image: linear-gradient(to right, var(--color-white), var(--color-white)), var(--background-image-gradient-2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* === Base Document Reset (기본 문서 스타일 초기화) === */
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
