@@ -25,15 +25,12 @@
 
 ### Built with
 
-- **React 19** — Component-based architecture with clean separation of concerns. The main UI is modularized into `NotificationsHeader`, `NotificationList`, and `NotificationItem` to ensure high reusability and maintainability.
-- **TypeScript 6** — Leveraged for static typing and strict interface checking across components and utility modules.
-- **React State Management (useReducer)** — Used the `useReducer` hook to manage user notification states robustly, partitioning actions into `'MARK_READ'` and `'MARK_ALL_READ'`.
+- **React 19** — Component-based architecture with clean separation of concerns. The main UI is modularized into `CardView` (card visualization), `CardForm` (user inputs), and `CompleteView` (success message) to ensure high reusability and structured data flow.
+- **React State Management (useState)** — Integrates unified states (`formData`, `errors`, `isSubmitted`) in the top-level `App` component, implementing solid one-way data binding to synchronize input entries and the card plate illustration in real time.
 - **Vite 8** — Utilized as the ultra-fast frontend build tool and local development server for instant Hot Module Replacement (HMR).
-- **Tailwind CSS v4** — Built with the next-generation CSS engine using `@theme` directives and custom `@utility` text presets directly in `src/index.css`, eliminating legacy config files and streamlining stylesheet code.
-- **clsx** — Integrated as a lightweight utility to dynamically combine and apply conditional Tailwind classes without complex string manipulation.
-- **date-fns v4** — Integrated as a lightweight time utility to programmatically compute and display human-readable relative durations (e.g., "1m ago", "5h ago", "2 weeks ago") relative to real-time timestamps.
-- **Semantic HTML5 & Accessibility (A11y)** — Structured with semantic tags (`<header>`, `<main>`, `<ul>`, `<li>`), accessible buttons supporting full keyboard navigation (`Tab`, `Enter`, `Space`), visually hidden screen reader labels (`<span class="sr-only">Unread</span>`), and dynamic announcement regions (`aria-live="polite"`).
-- **Responsive Card Layout & Device-Specific Hover** — Mobile-first responsive grid container with a maximum desktop width of `730px`. Includes custom media queries (`@media (hover: hover)`) targeting only pointer-enabled devices to strictly prevent sticky hovers on tablets and mobile viewports.
+- **Tailwind CSS v4** — Customizing utility classes such as `@theme` and `@utility` presets (e.g. `border-gradient-2-active` for the active input gradient outline) directly inside `src/index.css`, making stylesheets modular and eliminating the need for legacy configurations.
+- **Semantic HTML5 & Accessibility (A11y)** — Built with accessibility first. Links `<input>` items and `<label>` elements via unique IDs, manages real-time screen reader warnings using `role="alert"` alongside `aria-invalid`/`aria-describedby` mappings, and optimizes mobile text fields using `inputMode="numeric"` keys.
+- **Responsive Layout & Absolute Positioning** — Employs custom absolute positioning coordinates and responsive layout controls (`flex-col` on mobile viewports vs `flex-row` and `1440px` breakpoint boundaries on desktop viewports) to ensure card assets align seamlessly with the background artwork.
 
 
 ## Author
