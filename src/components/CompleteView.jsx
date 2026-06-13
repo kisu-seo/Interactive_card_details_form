@@ -18,7 +18,7 @@ export default function CompleteView({ onReset }) {
     >
       {/* === Complete Icon (완료 체크 아이콘) === */}
       <img 
-        src="/images/icon-complete.svg" 
+        src={`${import.meta.env.BASE_URL}images/icon-complete.svg`} 
         alt="제출 완료 완료 아이콘" 
         className="w-[80px] h-[80px] mb-spacing-400"
       />

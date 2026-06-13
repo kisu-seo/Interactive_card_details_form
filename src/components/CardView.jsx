@@ -37,14 +37,26 @@ export default function CardView({ formData }) {
   const cardYear = formData.year || '00';
   const cardCvc = formData.cvc || '000';
 
+  // --- Dynamic Asset Path Resolution (동적 에셋 경로 해석) ---
+  const bgMainMobile = `${import.meta.env.BASE_URL}images/bg-main-mobile.png`;
+  const bgMainDesktop = `${import.meta.env.BASE_URL}images/bg-main-desktop.png`;
+  const bgCardBack = `${import.meta.env.BASE_URL}images/bg-card-back.png`;
+  const bgCardFront = `${import.meta.env.BASE_URL}images/bg-card-front.png`;
+  const cardLogo = `${import.meta.env.BASE_URL}images/card-logo.svg`;
+
   return (
     <div
-      className="relative w-full h-[240px] md:h-[350px] bg-[url('/images/bg-main-mobile.png')] bg-cover bg-no-repeat lg:bg-[url('/images/bg-main-desktop.png')] lg:h-screen lg:w-[483px] shrink-0"
+      className="relative w-full h-[240px] md:h-[350px] card-view-bg lg:h-screen lg:w-[483px] shrink-0"
+      style={{
+        '--bg-main-mobile': `url(${bgMainMobile})`,
+        '--bg-main-desktop': `url(${bgMainDesktop})`
+      }}
       aria-label="신용카드 시각화 영역"
     >
       {/* === Card Back (뒷면 카드) === */}
       <div
-        className="absolute top-[32px] right-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-back.png')] bg-cover rounded-[8px] shadow-2xl transition-all duration-300
+        style={{ backgroundImage: `url(${bgCardBack})` }}
+        className="absolute top-[32px] right-[16px] w-[286px] h-[157px] bg-cover rounded-[8px] shadow-2xl transition-all duration-300
                    md:top-[32px] md:right-[112px] md:left-auto md:translate-x-0 md:w-[447px] md:h-[245px] md:rounded-[12px]
                    lg:top-[420px] lg:left-[140px] lg:right-auto lg:w-[447px] lg:h-[245px] lg:rounded-[12px]
                    xl:top-[466px] xl:left-[258px]"
@@ -62,7 +74,8 @@ export default function CardView({ formData }) {
 
       {/* === Card Front (앞면 카드) === */}
       <div
-        className="absolute top-[126px] left-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-front.png')] bg-cover rounded-[8px] p-spacing-200 flex flex-col justify-between shadow-2xl z-10 transition-all duration-300
+        style={{ backgroundImage: `url(${bgCardFront})` }}
+        className="absolute top-[126px] left-[16px] w-[286px] h-[157px] bg-cover rounded-[8px] p-spacing-200 flex flex-col justify-between shadow-2xl z-10 transition-all duration-300
                    md:top-[171px] md:left-[112px] md:translate-x-0 md:w-[447px] md:h-[245px] md:rounded-[12px] md:py-spacing-300 md:px-spacing-400
                    lg:top-[150px] lg:left-[80px] lg:w-[447px] lg:h-[245px] lg:rounded-[12px] lg:p-spacing-400
                    xl:top-[189px] xl:left-[164px]"
@@ -72,7 +85,7 @@ export default function CardView({ formData }) {
         {/* --- Card Logo (카드 로고) --- */}
         <div className="flex items-center gap-[10px]">
           <img
-            src="/images/card-logo.svg"
+            src={cardLogo}
             alt="카드 로고 아이콘"
             className="h-[30px] w-auto md:h-[47px] lg:h-[47px]"
           />

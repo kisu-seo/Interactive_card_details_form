@@ -100,3 +100,13 @@ body {
 input {
   font-family: inherit;
 }
+
+/* --- CardView Responsive Background (카드 시각화 반응형 배경) --- */
+@utility card-view-bg {
+  background-image: var(--bg-main-mobile);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (min-width: 1024px) {
+    background-image: var(--bg-main-desktop);
+  }
+}
