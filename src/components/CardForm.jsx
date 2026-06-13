@@ -302,7 +302,7 @@ export default function CardForm({ formData, setFormData, errors, setErrors, onS
       {/* === 확인 버튼 === */}
       <button
         type="submit"
-        className="w-full h-[53px] bg-purple-950 text-white rounded-lg font-medium text-preset-3 cursor-pointer mt-spacing-0 transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#6348FE]"
+        className="w-full h-[53px] bg-purple-950 text-white rounded-lg font-medium text-preset-3 cursor-pointer mt-spacing-0 md:mt-spacing-200 transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#6348FE]"
       >
         Confirm
       </button>

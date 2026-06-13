@@ -24,7 +24,7 @@ export default function CardView({ formData }) {
       <div
         className="absolute top-[32px] right-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-back.png')] bg-cover rounded-[8px] shadow-2xl transition-all duration-300
                    md:top-[32px] md:right-[112px] md:left-auto md:translate-x-0 md:w-[447px] md:h-[245px] md:rounded-[12px]
-                   lg:top-[469px] lg:left-[258px] lg:right-auto lg:w-[447px] lg:h-[245px] lg:rounded-[12px]"
+                   lg:top-[466px] lg:left-[258px] lg:right-auto lg:w-[447px] lg:h-[245px] lg:rounded-[12px]"
         role="img"
         aria-label="신용카드 뒷면 이미지"
       >
@@ -41,7 +41,7 @@ export default function CardView({ formData }) {
       <div
         className="absolute top-[126px] left-[16px] w-[286px] h-[157px] bg-[url('/images/bg-card-front.png')] bg-cover rounded-[8px] p-spacing-200 flex flex-col justify-between shadow-2xl z-10 transition-all duration-300
                    md:top-[171px] md:left-[112px] md:translate-x-0 md:w-[447px] md:h-[245px] md:rounded-[12px] md:py-spacing-300 md:px-spacing-400
-                   lg:top-[187px] lg:left-[164px] lg:w-[447px] lg:h-[245px] lg:rounded-[12px] lg:p-spacing-400"
+                   lg:top-[189px] lg:left-[164px] lg:w-[447px] lg:h-[245px] lg:rounded-[12px] lg:p-spacing-400"
         role="img"
         aria-label="신용카드 앞면 이미지"
       >

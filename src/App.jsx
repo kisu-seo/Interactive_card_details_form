@@ -60,7 +60,7 @@ export default function App() {
       <CardView formData={formData} />
 
       {/* === 우측/하단 카드 정보 입력 폼 및 결과 영역 === */}
-      <section className="flex-1 flex items-center justify-center pt-[91px] pb-[44px] md:pt-[145px] md:pb-[70px] lg:py-spacing-0 lg:px-spacing-500">
+      <section className="flex-1 flex items-center justify-center pt-[91px] pb-[44px] md:pt-[145px] md:pb-[70px] lg:py-spacing-0 lg:px-spacing-0 lg:justify-end lg:pr-[225px]">
         {!isSubmitted ? (
           <CardForm
             formData={formData}
