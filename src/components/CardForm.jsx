@@ -143,7 +143,7 @@ export default function CardForm({ formData, setFormData, errors, setErrors, onS
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-[380px] flex flex-col gap-spacing-300 px-spacing-300 py-spacing-0 lg:px-spacing-0 lg:py-spacing-0 lg:max-w-[380px]"
+      className="w-full max-w-[380px] flex flex-col gap-spacing-300 px-spacing-300 md:px-spacing-0 py-spacing-0 lg:px-spacing-0 lg:py-spacing-0 lg:max-w-[380px]"
       noValidate
     >
       <div className="flex flex-col gap-spacing-100">
@@ -209,9 +209,9 @@ export default function CardForm({ formData, setFormData, errors, setErrors, onS
       </div>
 
       {/* === 만료일 및 CVC 가로 배치 레이아웃 === */}
-      <div className="flex gap-spacing-200">
+      <div className="flex gap-spacing-200 md:gap-spacing-300 lg:gap-spacing-200">
         {/* 만료일 입력 필드 세트 */}
-        <div className="flex flex-col gap-spacing-100 flex-1">
+        <div className="flex flex-col gap-spacing-100 flex-1 md:w-[168px] md:flex-none lg:flex-1">
           <span className="text-preset-5 font-bold text-purple-950 uppercase">
             Exp. Date (MM/YY)
           </span>
@@ -230,7 +230,7 @@ export default function CardForm({ formData, setFormData, errors, setErrors, onS
                   onChange={handleMonthChange}
                   aria-invalid={errors.month ? "true" : "false"}
                   aria-describedby={errors.month ? "expiry-error" : undefined}
-                  className="w-full h-[45px] bg-white text-center rounded-[8px] text-preset-3 text-purple-950 placeholder-purple-950/25 border-none outline-none"
+                  className="w-full h-[45px] bg-white text-center md:text-left md:px-spacing-200 rounded-[8px] text-preset-3 text-purple-950 placeholder-purple-950/25 border-none outline-none"
                 />
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function CardForm({ formData, setFormData, errors, setErrors, onS
                   onChange={handleYearChange}
                   aria-invalid={errors.year ? "true" : "false"}
                   aria-describedby={errors.year ? "expiry-error" : undefined}
-                  className="w-full h-[45px] bg-white text-center rounded-[8px] text-preset-3 text-purple-950 placeholder-purple-950/25 border-none outline-none"
+                  className="w-full h-[45px] bg-white text-center md:text-left md:px-spacing-200 rounded-[8px] text-preset-3 text-purple-950 placeholder-purple-950/25 border-none outline-none"
                 />
               </div>
             </div>
