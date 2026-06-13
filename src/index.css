@@ -1,0 +1,30 @@
+/* === Tailwind Import & Custom Theme === */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', sans-serif;
+  
+  /* --- Brand Colors (브랜드 색상) --- */
+  --color-active-start: hsl(249, 99%, 64%);
+  --color-active-end: hsl(278, 94%, 30%);
+  --color-error: hsl(0, 100%, 66%);
+  
+  /* --- Neutral Colors (무채색 계열) --- */
+  --color-neutral-white: hsl(0, 100%, 100%);
+  --color-neutral-light-gray: hsl(270, 3%, 87%);
+  --color-neutral-gray: hsl(212, 12%, 71%);
+  --color-neutral-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* === Base Document Reset === */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  background-color: var(--color-neutral-white);
+  color: var(--color-neutral-dark-violet);
+  min-height: 100vh;
+}
+
+input {
+  font-family: inherit;
+}
